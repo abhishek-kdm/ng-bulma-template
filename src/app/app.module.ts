@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import UIModules from './ui/ui.module';
+import { UIModule } from './ui/ui.module';
 
 import { AuthInterceptorService } from './auth/auth.interceptor';
 import { DefaultComponent } from './default/default.component';
@@ -34,7 +34,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
 
     // need to be above of all custom modules.
-    ...UIModules,
+    UIModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],

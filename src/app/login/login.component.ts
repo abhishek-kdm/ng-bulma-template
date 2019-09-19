@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.authService.redirectUserToHome();
+    // this.authService.redirectUserToHome();
   }
 
 

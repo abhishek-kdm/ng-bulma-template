@@ -13,6 +13,6 @@ export class CoreComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-    this.authService.redirectAnonymousToDefault();
+    // this.authService.redirectAnonymousToDefault();
   }
 }

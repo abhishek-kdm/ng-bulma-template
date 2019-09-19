@@ -1,7 +1,13 @@
 import { BulmaUIModule } from './bulma/bulma.module';
 import { CustomUIModule } from './custom-ui/custom-ui.module';
+import { NgModule } from '@angular/core';
 
 
-const UIModules = [BulmaUIModule, CustomUIModule];
+const moduels = [BulmaUIModule, CustomUIModule];
 
-export default UIModules;
+@NgModule({
+  imports: moduels,
+  exports: moduels,
+})
+export class UIModule { }
+
