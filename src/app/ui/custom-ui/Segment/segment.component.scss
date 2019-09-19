@@ -1,0 +1,15 @@
+$shadow: #ccc;
+$background: #FEFEFE;
+
+.segment {
+  padding: 15px 15px;
+  margin: 15px 15px;
+  border-radius: 3px;
+  box-shadow: 0 3px 7px $shadow;
+  background-color: $background;
+
+  
+  &:hover {
+    box-shadow: 0 0 10px darken($shadow, 10%);
+  }
+}

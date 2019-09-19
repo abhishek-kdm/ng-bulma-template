@@ -1,0 +1,78 @@
+<div class="register-wrapper">
+
+  <app-card>
+
+    <div header>
+      <div class="app-card-header">REGISTER</div>
+    </div>
+
+    <div body>
+      <div class="app-card-body">
+        <form [formGroup]="registerForm">
+
+          <app-bulma-field-input ngDefaultControl
+            label="First Name"
+            placeholder="First Name"
+            name="first_name"
+
+            [icons]="{left: 'fas fa-user'}"
+            formControlName="first_name"
+          ></app-bulma-field-input>
+
+          <app-bulma-field-input ngDefaultControl
+            label="Last Name"
+            placeholder="Last Name"
+            name="last_name"
+
+            [icons]="{left: 'fas fa-user'}"
+            formControlName="last_name"
+          ></app-bulma-field-input>
+
+          <hr />
+
+          <app-bulma-field-input ngDefaultControl
+            label="Username"
+            placeholder="Username"
+            name="username"
+
+            [icons]="{left: 'fas fa-user'}"
+            formControlName="username"
+          ></app-bulma-field-input>
+
+          <app-bulma-field-input ngDefaultControl
+            label="Choose Password"
+            placeholder="Choose Password"
+            type="password"
+            name="password"
+
+            [icons]="{left: 'fas fa-key'}"
+            formControlName="password"
+          ></app-bulma-field-input>
+
+          <app-bulma-field-input ngDefaultControl
+            label="Confirm Password"
+            placeholder="Confirm Password"
+            type="password"
+            name="confirm"
+
+            [icons]="{left: 'fas fa-key'}"
+            formControlName="confirm"
+          ></app-bulma-field-input>
+
+          <br />
+          <button type="button" class="button is-primary">REGISTER</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div footer>
+      <small class="app-card-footer">
+        ALREADY A MEMBER?&nbsp;&nbsp;<a routerLink="/login">LOGIN</a>
+      </small>
+    </div>
+
+  </app-card>
+
+</div>
+

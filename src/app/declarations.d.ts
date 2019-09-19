@@ -1,0 +1,5 @@
+
+interface Burger {
+  isActive: boolean;
+}
+

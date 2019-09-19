@@ -1,0 +1,41 @@
+<div class="login-wrapper">
+
+  <app-card>
+
+    <div header>
+      <div class="app-card-header">LOGIN</div>
+    </div>
+
+    <div body>
+      <div class="app-card-body">
+
+        <app-bulma-field-input
+          label="Username"
+          placeholder="Username"
+          [icons]="{left: 'fas fa-user'}"
+        ></app-bulma-field-input>
+
+        <app-bulma-field-input
+          label="Password"
+          placeholder="Password"
+          type="password"
+          [icons]="{left: 'fas fa-key'}"
+        ></app-bulma-field-input>
+        <app-bulma-field-checkbox>
+          Remember Me
+        </app-bulma-field-checkbox>
+        <br />
+        <button class="button is-primary">LOGIN</button>
+
+      </div>
+    </div>
+
+    <div footer>
+      <small class="app-card-footer">
+        NOT A MEMBER?&nbsp;&nbsp;<a routerLink="/register">REGISTER</a>
+      </small>
+    </div>
+
+  </app-card>
+
+</div>

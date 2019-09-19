@@ -1,0 +1,39 @@
+@mixin flexed($direction, $centered) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $centered {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-card-header {
+  @include flexed(column, true);
+
+  flex-grow: 1;
+  font-weight: 700;
+  font-size:24px;
+  margin: 20px;
+}
+
+.app-card-body {
+  @include flexed(column, false);
+  flex-grow: 1;
+  & > * { margin: 5px 15px; }
+}
+
+
+.app-card-footer {
+  @include flexed(row, true);
+
+  flex-grow: 1;
+  margin: 10px auto;
+}

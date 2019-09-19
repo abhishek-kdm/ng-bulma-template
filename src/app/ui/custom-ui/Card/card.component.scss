@@ -1,0 +1,64 @@
+$shadow: rgb(209, 209, 209);
+$background: #FEFEFE;
+
+$header: "::ng-deep > div:first-of-type";
+$body: "::ng-deep > div:nth-child(2)";
+$footer: "::ng-deep > div:last-of-type";
+
+
+@mixin flexed($direction, $centered) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $centered {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.card {
+  @include flexed(column, false);
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: $background;
+  border-radius: 2px;
+  box-shadow: 1px 3px 15px $shadow;
+  padding: 10px;
+
+  #{$header}, #{$footer} {
+    @include flexed(column, false);
+  }
+
+  #{$footer} {
+    border-top: 1px solid $shadow;
+    margin-top: 15px;
+  }
+
+  // #{$header} {
+  //   border-bottom: 1px solid $shadow;
+  //   margin-bottom: 15px;
+  // }
+
+
+  #{$body} {
+    @include flexed(column, false);
+    flex-grow: 1;
+  }
+
+
+  &:hover {
+    box-shadow: 0 0 10px darken($shadow, 10%);
+  }
+
+  @media screen and (min-width: 40em) {
+    & {
+      width: 400px;
+      height: auto;
+      margin: 15px auto;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+<app-bulma-nav brandImage="{{ brandImage }}">
+  <div class="navbar-start">
+    <a routerLink="/core/home" (click)="toggleBurger()" href="#" class="navbar-item">
+      Home
+    </a>
+
+    <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link">
+        More
+      </a>
+
+      <div class="navbar-dropdown">
+        <div class="navbar-item">
+          About
+        </div>
+        <hr class="navbar-divider">
+        <div class="navbar-item">
+          Report an issue
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <a class="button is-primary" routerLink="/logout">
+        <strong>Logout</strong>
+      </a>
+    </div>
+  </div>
+</app-bulma-nav>

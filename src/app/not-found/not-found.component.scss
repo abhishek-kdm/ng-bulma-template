@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 15px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .not-found {
+    display: flex;
+    flex-direction: column;
+  
+    flex-grow: 1;
+  
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+  
+    .text {
+      display: flex;
+      justify-content: center;
+  
+      color: black;
+      font-weight: 700;
+      font-size: 9vh;
+    }
+  }
+
+  .go-back {
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}  

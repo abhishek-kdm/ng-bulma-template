@@ -1,0 +1,21 @@
+@import './globals.scss';
+@import './animations.scss';
+
+
+@function loader-border($color) {
+  @return 5px solid $color;
+}
+
+.app-loader {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: loader-border(transparent);
+
+  border-top: loader-border($primary);
+  border-right: loader-border($primary);
+
+  -webkit-animation: spin .6s linear infinite;
+  animation        : spin .6s linear infinite;
+}
+
