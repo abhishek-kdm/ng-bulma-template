@@ -15,6 +15,8 @@ import UIModules from './ui/ui.module';
 import { AuthInterceptorService } from './auth/auth.interceptor';
 import { DefaultComponent } from './default/default.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { LogoutComponent } from './logout/logout.component';
     // need to be above of all custom modules.
     ...UIModules,
     CoreModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     AuthInterceptorService,
