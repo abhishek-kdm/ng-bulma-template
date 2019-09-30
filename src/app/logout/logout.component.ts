@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
+import { Title } from '@angular/platform-browser';
+import { APP_TITLE } from '../utils';
 
 
 @Component({
@@ -9,7 +11,12 @@ import { AuthService } from '../auth/auth.service';
 })
 export class LogoutComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(
+    private authService: AuthService,
+    private titleService: Title,
+  ) {
+    this.titleService.setTitle(`Logging out | ${APP_TITLE}`);
+  }
 
   ngOnInit() {
     setTimeout(() => {
